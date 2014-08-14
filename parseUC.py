@@ -11,13 +11,17 @@ def generateOtuDict(ucFile):
     #Create the dictionary
     otuD = {}
     
-    #parse out the pertinet information and place into the dictionary
+    matched = 0.0   #number to determine how many matched
+
+    #parse out the pertinant information and place into the dictionary
     for line in lines:
         line = line.split('\t')
         if line[9]!= '*':
             otuD.setdefault(line[9],[]).append(line[8])
-    
-    return otuD 
+            matched +=1
+
+    print    'Fraction Matched: ', matched/len(lines)   #print out the number matched.
+    return otuD
 
 def makeOtuList(otuD):
     """Takes the an OtuDictionary and colates it into a tuppled list that can be sorted. """

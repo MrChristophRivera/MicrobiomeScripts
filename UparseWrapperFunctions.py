@@ -1,5 +1,5 @@
 # Load the desired modules
-import sys
+#import sys
 
 #import parseUC
 import os
@@ -7,10 +7,7 @@ import subprocess as sp
 from os.path import join
 import gzip
 #from time import time
-
-sys.path.append('/Users/chrisrichardrivera/Documents/PythonScripts/MicrobiomeScripts')   #append the path to libraries. 
-from QiimeWrappers import *
-
+#sys.path.append('/Users/chrisrichardrivera/Documents/PythonScripts/MicrobiomeScripts')   #append the path to libraries. 
 
 ##################################
 #Merging
@@ -336,7 +333,8 @@ def countSeqFast(fname):
 if __name__ == '__main__':
     
     #path= '/Users/christopherrichardrivera/Documents/Pond_Project/Digester_Project/DigesterExperiment/Digester4Trimmed'
-    #tabulateReads(path)
+
+    pass
     
     
     
